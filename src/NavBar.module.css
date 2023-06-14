@@ -1,0 +1,119 @@
+.shadow{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+h4{
+    font-size: 35px;
+    font-weight: bolder;
+    color: #436CEA;
+  }
+
+.NavBar{
+  /* z-index: -1; */
+}
+  
+  .searchInput{
+      display: flex;
+      padding: 0 0 0 10px;
+      color: #5f6368;
+      align-items: center;
+      justify-content: space-between;
+      /* background-color: rgba(164, 156, 156, 0.2); */
+      margin: 10px 10px 10px 10px;
+      width: 650px;
+      /* margin-top: 10px;
+      margin-bottom: 10px; */
+      border-radius: 50px;
+      border: 0.5px solid #5f6368;
+  }
+  
+  
+  .searchInput p{
+    margin-left: 15px;
+    margin-top: 15px;
+    /* font-weight: bold; */
+    /* background-color: #5f6368; */
+  }
+  
+  .searchInput span{
+    margin-right: 20px;
+    background-color: #436CEA;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+    /* background-color: #5f6368; */
+  }
+  .thirdElement{
+    display: flex;
+    align-items: center;
+    
+  }
+  .thirdElement a {
+    text-decoration: none;
+    
+  }
+  .firstButton{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    width: 200px;
+    height: 40px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    background-color: #F7F7F7;
+    align-items: center;
+    border-radius: 50px;
+    border: 0.5px solid #5f6368;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+  }
+  .firstButton p{
+    font-weight: bold;
+    color: #5f6368;
+  }
+  .secondButton p{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 30px;
+  }
+  .thirdButton p{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 30px;
+  }
+  
+  @media (max-width: 767px) { 
+  
+    .thirdElement{
+      display: flex;
+      align-items: center;
+      
+    }
+    .firstButton{
+      display: flex;
+      justify-content: center;
+      padding: 0 0 0 10px;
+      width: 130px;
+      height: 40px;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      background-color: #F7F7F7;
+      align-items: center;
+      border-radius: 50px;
+      border: 0.5px solid #5f6368;
+      margin-right: 30px;
+      margin-left: 20px;
+      
+    }
+  
+    .thirdElement p{
+      font-size: 10px;
+      
+    }
+   }

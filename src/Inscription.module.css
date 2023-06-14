@@ -1,0 +1,36 @@
+
+.Title{
+    font-size:  30px;
+    font-weight: bold;
+}
+.Imgsize{
+    height: 150px;
+    padding-top: 2px;
+}
+.UserBox{
+    border-radius: 15px;
+    width: 100%;
+    border: 0.8px solid #707070;
+}
+.UserBox:hover{
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.UserFP{
+ font-size: 20px;
+ font-weight: bold;
+}
+.UserSP{
+    color: #707070 ;
+}
+.Ou{
+    font-weight: bold;
+    color: #707070 ;
+    margin-top: 25%;
+}
+.fontP{
+    margin-top: 60px;
+    font-size: 15px;
+}
+.connexion{
+    color: #436CEA;;
+}

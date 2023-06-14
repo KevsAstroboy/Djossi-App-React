@@ -1,0 +1,101 @@
+.MainContainer {
+    position: fixed;
+    padding-top: 60px;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* overflow-y: auto; */
+  }
+  
+  .modalContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: fixed;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    overflow: auto; 
+    
+  }
+  .modalContainer span{
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    left: 500px;
+    bottom: 130px;
+  }
+
+  /* Styles pour le label */
+label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Styles pour le select */
+  select {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  /* Styles pour les options */
+  select option {
+    padding: 8px;
+  }
+  
+  /* Styles pour le hover sur les options */
+  select option:hover {
+    background-color: #f2f2f2;
+  }
+ /* Styles pour le label */
+label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Styles pour le datepicker */
+input[type="date"] {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+  
+  /* Styles pour le hover sur le datepicker */
+  input[type="date"]:hover {
+    background-color: #f2f2f2;
+  }
+
+.Margin{
+    padding-top:10px ;
+}
+
+/* Add the following CSS code to your existing CSS file or create a new one */
+
+@media (max-width: 767px) { 
+ 
+  .modalContainer span{
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    left: 180px;
+    bottom: 165px;
+  }
+}
+  

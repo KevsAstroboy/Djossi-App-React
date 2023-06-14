@@ -1,0 +1,76 @@
+.jobLogo > img{
+    height: 50px;
+    margin-right: 55px;
+}
+
+
+
+.ElementContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    width: 250px;
+    padding: 20px;
+    padding-right: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.MainContainer {
+    position: fixed;
+    padding-top: 60px;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    /* overflow-y: auto; */
+  }
+  
+  .modalContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    
+  }
+
+  .modalContainer span{
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    left: 350px;
+    bottom: 25px;
+    
+  }
+
+
+  @media (max-width: 767px) { 
+    .modalContainer span{
+        font-size: 30px;
+        font-weight: bolder;
+        position: fixed;
+        left: 180px;
+        bottom: 750px;
+        
+      }
+  }
+ 
