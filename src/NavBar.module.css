@@ -13,7 +13,7 @@ h4{
   /* z-index: -1; */
 }
   
-  .searchInput{
+.searchInput{
       display: flex;
       padding: 0 0 0 10px;
       color: #5f6368;
@@ -26,7 +26,7 @@ h4{
       margin-bottom: 10px; */
       border-radius: 50px;
       border: 0.5px solid #5f6368;
-  }
+}
   
   
   .searchInput p{
@@ -46,13 +46,12 @@ h4{
   }
   .thirdElement{
     display: flex;
-    align-items: center;
-    
+    align-items: center; 
   }
   .thirdElement a {
     text-decoration: none;
-    
   }
+
   .firstButton{
     display: flex;
     justify-content: center;
@@ -67,8 +66,39 @@ h4{
     border: 0.5px solid #5f6368;
     margin-right: 30px;
     margin-left: 30px;
+  }
+
+  .zeroButton{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    width: 200px;
+    height: 40px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    /* background-color: #F7F7F7; */
+    align-items: center;
+    border-radius: 50px;
+    /* border: 0.5px solid #5f6368; */
+    /* margin-right: 30px;
+    margin-left: 30px; */
     
   }
+
+  .zeroButton p{
+    margin-right: 40px;
+  }
+
+  .zerButton span{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .zeroButton span{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
   .firstButton p{
     font-weight: bold;
     color: #5f6368;
@@ -80,13 +110,26 @@ h4{
     color: #000000;
     margin-right: 30px;
   }
+
+
   .thirdButton p{
     padding-top: 30px;
     padding-bottom: 15px;
     font-weight: bold;
     color: #000000;
-    margin-right: 30px;
+    margin-right: 50px;
   }
+
+  .thirdButton img{
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    /* padding: 5px; */
+    border-radius: 50px;
+    margin-right: 50px;
+  }
+
+  
   
   @media (max-width: 767px) { 
   
@@ -107,13 +150,33 @@ h4{
       align-items: center;
       border-radius: 50px;
       border: 0.5px solid #5f6368;
-      margin-right: 30px;
-      margin-left: 20px;
+      /* margin-right: 30px; */
+      /* margin-left: 20px; */
       
     }
   
     .thirdElement p{
       font-size: 10px;
       
+    }
+
+    .thirdButton p{
+      padding-top: 30px;
+      padding-bottom: 15px;
+      font-weight: bold;
+      color: #000000;
+      margin-right: 30px;
+    }
+  
+    .thirdButton img{
+      box-sizing: border-box;
+      height: 50px;
+      width: 50px;
+      /* padding: 5px; */
+      border-radius: 50px;
+      margin-right: 30px;
+    }
+    .zeroButton p{
+      margin-right: 30px;
     }
    }

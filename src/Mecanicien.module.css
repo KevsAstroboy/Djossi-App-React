@@ -1,0 +1,46 @@
+.Box{
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000;
+    height: 130px;
+    width: 350px;
+    text-align: start;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    /* margin-right: 100px; */
+
+}
+
+
+
+.Box img{
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.Name{
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Notes{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Details{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.Main{
+    /* overflow: auto; */
+    height: 100%;
+    width: 100%;
+    /* margin-left: 50px; */
+}

@@ -2,13 +2,42 @@ import classes from './NavBar.module.css';
 import NavBarItems from './MenuItems';
 import { Link } from 'react-router-dom';
 import React from 'react';
+// import { useSelector } from 'react-redux';
+import NavBarLogin from './NavBarLogin';
 import { useState } from 'react';
-import ModalUserConnexion from './ModalUserConnexion';
+import Modal from './Modal';
+import dotenv from 'dotenv';
+
+dotenv.config();
+// import { useDispatch } from 'react-redux';
+// import { setUserdata } from './Actions';
+
+
+// import ModalUserConnexion from './ModalUserConnexion';
 const NavBar = (props) =>{
  
+    const [openModal,setOpenModal]=useState(false)
+    const savedUserData = localStorage.getItem('userData');
+    // const dispatch = useDispatch();
+    // if (savedUserData) {
+    // dispatch(setUserdata(JSON.parse(savedUserData)));
+    // }
+    // const userData = useSelector((state) => state.userDatas);
+    const userData = JSON.parse(savedUserData)
+    const apiUrl = process.env.REACT_APP_API_URL;
+    
+    
+    // let user_photo = null;
+    // const [openModalConnexion,setopenModalConnexion]=useState(false)
+    
 
-    const [openModalConnexion,setopenModalConnexion]=useState(false)
-
+    // const NavBarItem = NavBarItems.map((item,pos)=>{
+    //      return(
+    //         <div key={pos} className={classes[item.cssClasses]}><Link to={item.url} ><p>{item.name}</p></Link></div>
+    //      )
+    // })
+  
+    
     const NavBarItem = NavBarItems.map((item,pos)=>{
          return(
             <div key={pos} className={classes[item.cssClasses]}><Link to={item.url} ><p>{item.name}</p></Link></div>
@@ -17,9 +46,9 @@ const NavBar = (props) =>{
 
     return(
        <>
-         <nav className={`navbar navbar-expand-lg bg-white navbar-white shadow ${classes.NavBar}`}>
+         {userData ? <NavBarLogin  prenom ={userData.prenom_client} avatar ={`${apiUrl}${userData.photo_client}`} openModal={()=>setOpenModal(true)}/> : <nav className={`navbar navbar-expand-sm bg-white navbar-white shadow ${classes.NavBar}`}>
           <div className='container'>
-               <Link to='/' className='navbar-brand'><h4>Djossi</h4></Link>
+               <Link to='/' className='navbar-brand'><h4>djossi</h4></Link>
                <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navmenu'>
                <span class="material-symbols-outlined">
                     menu
@@ -38,8 +67,8 @@ const NavBar = (props) =>{
                    {NavBarItem}
                </div>
           </div>
-        </nav>
-        <ModalUserConnexion open={openModalConnexion} onClose={()=>setopenModalConnexion(false)}/>
+        </nav>}
+        <Modal open={openModal} onClose={()=>setOpenModal(false)}/>
        </>
     )
 

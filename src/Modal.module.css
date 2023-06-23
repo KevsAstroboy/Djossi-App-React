@@ -50,13 +50,13 @@ a{
     position: relative;
     padding-bottom: 200px;
     padding-top: 50px;
-    
+    overflow: auto;
   }
 
   .modalContainer span{
     font-size: 30px;
     font-weight: bolder;
-    position: relative;
+    /* position: relative; */
     left: 350px;
     bottom: 25px;
     
@@ -67,10 +67,10 @@ a{
     .modalContainer span{
         font-size: 30px;
         font-weight: bolder;
-        position: fixed;
+        /* position: fixed;- */
         left: 180px;
         bottom: 750px;
-        
+        margin-bottom: 20px;
       }
   }
  

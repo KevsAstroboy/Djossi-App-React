@@ -27,6 +27,15 @@
 .first{
   margin-bottom: 7%;
 }
+
+.paragraphe{
+  font-size:  24px;
+}
+
+.para2{
+  font-size: 40px;
+  font-weight: bold;
+}
 @media (max-width: 767px) {
 
   .second img{
@@ -38,13 +47,24 @@
     font-weight: bolder;
     font-size: 20px;
   }
+
+
   
   .secondP{
     font-weight: bold;
     font-size: 15px;
     color: #707070;
   }
-
+  
+  .paragraphe{
+    font-size:  12px;
+  }
+  
+  .para2{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
   
 
 }

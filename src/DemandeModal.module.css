@@ -1,0 +1,144 @@
+.BoxCommentaire img{
+    width: 5px;
+    height: 150px;
+    padding-top: 22px;
+    /* border-radius:50%; */
+}
+
+.BoxCommentaire{
+    margin-top: 100px;
+    
+}
+
+.Name{
+    font-weight: bold;
+    padding-top: 50px;
+    margin-right: 40px;
+}
+
+
+.Status{
+    margin-top: 60px;
+    padding-top: 5px;
+    margin-right: 20px;
+    font-weight: bolder;
+    height: 35px;
+    width: 90px;
+    border-radius: 50px;
+    color: black;
+    background-color: #D6D6D6;
+    border: 1px solid #707070;
+}
+
+.Status1{
+    margin-top: 60px;
+    padding-top: 5px;
+    margin-right: 20px;
+    height: 35px;
+    width: 90px;
+    border-radius: 100px;
+    color: white;
+    background-color: #436CEA;
+    font-weight: bold;
+    /* border: 1px solid #707070; */
+}
+.Status2{
+    margin-top: 60px;
+    padding-top: 5px;
+    margin-right: 20px;
+    height: 35px;
+    width: 90px;
+    border-radius: 100px;
+    color: white;
+    /* background-color: #436CEA; */
+    font-weight: bold;
+    /* border: 1px solid #707070; */
+}
+
+.MainContainer {
+    position: fixed;
+    padding-top: 60px;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    /* overflow-y: auto; */
+  }
+  
+  .modalContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    overflow: auto;
+  }
+
+  .close{
+    font-size: 30px;
+    font-weight: bolder;
+    /* position: relative; */
+    left: 450px;
+    bottom: 25px;
+    
+  }
+
+
+
+ 
+
+@media (max-width: 767px) { 
+    .BoxCommentaire img{
+        width: 50px;
+        height: 100px;
+        padding-top: 22px;
+        /* border-radius: 50px; */
+    }
+
+    .Status{
+        margin-top: 65px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50px;
+        width: 400px;
+        border-radius: 50px;
+        color: black;
+        background-color: #D6D6D6;
+        border: 1px solid #707070;
+    }
+    .Status1{
+        margin-top: 65px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50px;
+        width: 400px;
+        border-radius: 50px;
+        color: white;
+        background-color: #436CEA;
+    
+    }
+
+    .close {
+        font-size: 30px;
+        font-weight: bolder;
+        position: fixed;
+        left: 170px;
+        bottom: 670px;
+        margin-bottom: 20px;
+      }
+
+   
+  }

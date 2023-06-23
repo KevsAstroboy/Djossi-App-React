@@ -7,15 +7,30 @@ import Home from './Home';
 import React from 'react';
 import Inscription from './Inscription';
 import ModalUserConnexion from './ModalUserConnexion';
+import Mecanicien from './Mecanicien';
+import DemandeService from './DemandeService';
+import ModalAvis from './ModalAvis';
+import Paiement from './Paiement';
+import Electricien from './Electricien';
+import Plomberie from './Plomberie';
+import Maquilleuse from './Maquilleuse';
+import Coiffeur from './Coiffeur';
+import Fanico from './Fanico';
+
+
+// import NavBarLogin from './NavBarLogin';
+
 
 
 function App() {
 
    const [openModal,setOpenModal]=useState(false)
+   
+   
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar openModal={()=>setOpenModal(true)}/>
+       <NavBar openModal={()=>setOpenModal(true)}/>
       </header>
       <Modal open={openModal} onClose={()=>setOpenModal(false)}/>
       {/* <div className="MainContainer">
@@ -61,8 +76,16 @@ function App() {
               <Route path= "/devenir-prestataire" element={<Prestataire/>}/>
               <Route path= "/connexion" element={<ModalUserConnexion/>}/>
               <Route path= "/inscription" element={<Inscription/>}/>
-              {/* <Route path= "/archive" element={<Archive/>}/>
-              <Route path= "/trash" element={<Trash/>}/> */}
+              <Route path= "/mecanicien" element={<Mecanicien/>}/>
+              <Route path= "/demande-service" element={<DemandeService/>}/>
+              <Route path= "/avis" element={<ModalAvis/>}/>
+              <Route path= "/paiement" element={<Paiement/>}/>
+              <Route path= "/electricien" element={<Electricien/>}/>
+              <Route path= "/plomberie" element={<Plomberie/>}/>
+              <Route path= "/maquilleuse" element={<Maquilleuse/>}/>
+              <Route path= "/coiffeur" element={<Coiffeur/>}/>
+              <Route path= "/fanico" element={<Fanico/>}/>
+              {/* <Route path= "/trash" element={<Trash/>}/> */}
             </Routes>
           </>
     </div>
