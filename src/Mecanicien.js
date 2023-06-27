@@ -44,7 +44,7 @@ const Mecanicien = () => {
             // prestataireData.photo_prestataire = `http://127.0.0.1:8000/${response.data.data.photo_prestataire}`;
             // console.log(prestataireData)
             setPrestataireData(prestataireDat);
-          setLoading(false)
+            setLoading(false)
           }
         } catch (error) {
           // console.error(error);

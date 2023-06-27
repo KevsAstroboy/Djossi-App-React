@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setReservationId } from './Actions';
 import dotenv from 'dotenv';
+import CircleLoader from "react-spinners/CircleLoader";
 
 dotenv.config();
 // import { useSelector } from 'react-redux';
@@ -16,6 +17,7 @@ const DemandeModal = (props) => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const [demandeData, setDemandeData] = useState();
   const savedUserData = localStorage.getItem('userData');
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const userData = JSON.parse(savedUserData);
   const [error, setError] = useState("Vous n'avez fait de demande de service.");
@@ -33,11 +35,14 @@ const DemandeModal = (props) => {
             // prestataireData.photo_prestataire = `http://127.0.0.1:8000/${response.data.data.photo_prestataire}`;
             // console.log(prestataireData)
             setDemandeData(demandeDat);
+            setLoading(false)
           }
         } catch (error) {
           // console.error(error);
           // error = error.data.data;
             setError("Vous n'avez fait de demande de service."); 
+            setLoading(false)
+
         }
       }
     };
@@ -72,7 +77,14 @@ const DemandeModal = (props) => {
             close
           </span>
            
-          <div className={classe.Commentaire}>
+         {loading ?  <CircleLoader
+                   className='align-items-center justify-content-center'
+                    color={"#436CEA"}
+                    loading={loading}
+                    size={90}
+                    // aria-label="Loading Spinner"
+                    // data-testid="loader"
+                  /> : <div className={classe.Commentaire}>
                            { demandeData && demandeData.length > 0 ? demandeData.map((item,pos)=>{
                                 return(
                                     <>
@@ -101,7 +113,7 @@ const DemandeModal = (props) => {
                            }) :  <div role="alert" className="alert alert-info my-3">
                                 {error}
                              </div>}                     
-          </div>
+          </div>}
         
         </div>
       </div>

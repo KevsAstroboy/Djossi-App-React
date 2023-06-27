@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { setUserdata } from './Actions';
 import { Link } from 'react-router-dom';
 import dotenv from 'dotenv';
+import CircleLoader from "react-spinners/CircleLoader";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ const Plomberie = () => {
   const [prestataireData, setPrestataireData] = useState();
   const [prestataireDatas, setPrestataireDatas] = useState();
   const [onClick, setonClick] = useState(false);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     ville: '',
@@ -42,11 +44,13 @@ const Plomberie = () => {
             // prestataireData.photo_prestataire = `http://127.0.0.1:8000/${response.data.data.photo_prestataire}`;
             // console.log(prestataireData)
             setPrestataireData(prestataireDat);
+            setLoading(false);
           }
         } catch (error) {
           // console.error(error);
           // error = error.data.data;
             setError("Aucun plombier n'a été trouvé dans votre zone."); 
+            setLoading(false);
         }
       }
     };
@@ -155,7 +159,14 @@ const Plomberie = () => {
                  <div className='row my-5'>
                  <div className='col-3'></div>
                  <div className='col-3'></div>
-                 <div className={`col-3 ${classes.Main}`}>
+                 {loading ? <CircleLoader
+                   className='align-items-center justify-content-center'
+                    color={"#436CEA"}
+                    loading={loading}
+                    size={90}
+                    // aria-label="Loading Spinner"
+                    // data-testid="loader"
+                  />:<div className={`col-3 ${classes.Main}`}>
                       {onClick ? (prestataireDatas ?(
                         prestataireDatas.map((item, pos) => {
                           return (
@@ -202,7 +213,7 @@ const Plomberie = () => {
                           </div>
                         )
                       )}
-                    </div>
+                    </div>}
 
                  </div>
                 </div>
