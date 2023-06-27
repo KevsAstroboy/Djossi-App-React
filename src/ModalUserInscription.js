@@ -4,6 +4,8 @@ import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import CircleLoader from "react-spinners/CircleLoader";
+
 
 dotenv.config();
 
@@ -11,6 +13,7 @@ const ModalUserInscription = (props) => {
     if(!props.open) return null;
     const [message, setMessage] = useState('');
     const [selectedFile, setSelectedFile] = useState(null);
+    const [loading, setLoading] = useState(false);
     const apiUrl = process.env.REACT_APP_API_URL;
     const [formData, setFormData] = useState({
         nom_client: '',
@@ -37,7 +40,7 @@ const ModalUserInscription = (props) => {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-    
+        setLoading(true)
         try {
           const formDataToSend = new FormData();
           formDataToSend.append('nom_client', formData.nom_client);
@@ -53,10 +56,12 @@ const ModalUserInscription = (props) => {
           const response = await axios.post(`${apiUrl}api/register/`, formDataToSend);
           if (response.status === 200) {
             setMessage('Account created successfully!');
+            setLoading(false)
           }
         } catch (error) {
         //   console.error(error.response.data.data);
           setMessage(error.response.data.data);
+          setLoading(false)
         }
       };
     return(
@@ -70,6 +75,14 @@ const ModalUserInscription = (props) => {
             </span>
             <form onSubmit={handleSubmit}>
                 <div className='row'>
+                {loading ? <CircleLoader
+                   className='align-items-center justify-content-center'
+                    color={"#436CEA"}
+                    loading={loading}
+                    size={90}
+                    // aria-label="Loading Spinner"
+                    // data-testid="loader"
+                  />:null}
                     <div className='col-md'>
                     <div class="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Nom</label>

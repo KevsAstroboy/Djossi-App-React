@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import dotenv from 'dotenv';
+import CircleLoader from "react-spinners/CircleLoader";
 
 dotenv.config();
 // import { useDispatch } from 'react-redux';
@@ -15,12 +16,13 @@ const ModalUserConnexion = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const apiUrl = process.env.REACT_APP_API_URL;
     // const dispatch = useDispatch();
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+        setLoading(true)
         try {
             const response = await axios.post(`${apiUrl}api/login/`, {
               username,
@@ -39,6 +41,7 @@ const ModalUserConnexion = (props) => {
             // Handle other errors, such as network issues
             // console.log(error.data);
             setMessage(error.response.data.data);
+            setLoading(false)
           }
       };
     return(
@@ -58,6 +61,14 @@ const ModalUserConnexion = (props) => {
                     <label for="exampleInputEmail1" className="form-label">Nom d'utilisateur</label>
                     <input type="text" className="form-control" aria-describedby="emailHelp" value={username} onChange={(e) => setUsername(e.target.value)}/>
                 </div>
+                {loading ? <CircleLoader
+                   className='align-items-center justify-content-center'
+                    color={"#436CEA"}
+                    loading={loading}
+                    size={90}
+                    // aria-label="Loading Spinner"
+                    // data-testid="loader"
+                  />:null}
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
                     <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => setPassword(e.target.value)}/>
